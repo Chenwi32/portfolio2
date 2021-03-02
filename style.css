@@ -1,0 +1,319 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
+/*----Nav styling-----*/
+.nav-container {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(243, 239, 239, 0.815); 
+    width: 100%;
+    z-index: 1;
+}
+
+.link-container{
+    display: flex;
+}
+
+.link-container>div{
+    margin: 0.5em  0.2em 0.2em;
+}
+
+.link-container>div a{
+    text-decoration: none;
+    margin: 0.5em;
+    padding: 0.5em;
+    color: rgba(0, 0, 0, 0.637);
+    transition: 0.5s;
+    text-transform: uppercase;
+}
+
+.nav-link-active a{
+    border-bottom: 0.2em solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0) !important; 
+}
+.link-container>div a:hover{
+    border-bottom: 0.2em solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+}
+
+.nav-container .logo-container{
+    height: 40px;
+
+}
+
+.nav-container .logo-container img{
+    height: 100%;
+   width: 35%;
+   margin-left: 70%;
+}
+
+/*Portfolio Items*/
+.portfolio-items-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 2.5em 0 0.5em;
+}
+
+.portfolio-background{
+    background-position: center; 
+    background-repeat: no-repeat;  
+      background-size: cover;
+     height: 100%;
+     width: 100%;
+}
+
+.portfolio-item-wrapper{
+    position: relative;
+    height: 350px;
+    width: 99.5%;
+    margin: 0.1em 0.1em;
+}
+
+.portfolio-content{
+    position: absolute;
+    height: 100%;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 0;
+    margin: 0;
+    padding: 0.9em;
+    
+
+}
+
+.portfolio-content:hover .portfolio-description{
+    color: rgb(3, 163, 136);
+    font-weight: 600;
+}
+.portfolio-description{
+    font-weight: 600;
+    transition: 0.9s;
+    color: transparent;
+}
+.portfolio-logo{
+    width: 50%;
+
+}
+
+.portfolio-logo img{
+    width: 60%;
+    margin: auto;
+}
+
+
+.filter-me{
+background-color: black;
+filter: brightness(50%);
+}
+.image-darken {
+    transition: 1s;
+    filter: brightness(10%); 
+}
+
+
+/*-----About us styling----*/
+
+.profile-container{
+    width: 70%;
+    margin: 0 auto;
+}
+
+
+.profile-picture{
+    width: 100%;
+    margin: auto;
+}
+
+.profile-picture img{
+    width: 80%;
+   
+}
+
+.team-member{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5em ;
+    margin: 2.5em 0 0.5em;
+}
+
+.team-member h1{
+    font-size: 2.2em;
+color: cyan;
+}
+
+.team-member p{
+font-size: 1.1em;
+}
+
+
+/*Footer*/
+
+
+footer{
+    background-color: rgba(20, 15, 15, 0.836);
+     justify-content: center;
+      flex-direction: column; 
+       margin-bottom: 0;
+       align-content: center;
+          text-align: center;
+             padding: 0.5em 0.8em;
+             display: flex;
+               color: white;
+}
+hr{
+    border-color: rgb(192, 4, 4);
+           width: 100%;
+}
+footer a{
+    text-decoration: none;
+          font-size: 1.1em;
+        transition: 0.5s;    
+            padding: 0.2em;
+             margin: 0.2em;
+              color: rgb(240, 215, 215);
+}
+
+footer a:hover{
+        color: rgb(224, 195, 98);
+        padding-top: 0.7em;
+}
+
+
+.contact{
+    display: flex;
+    flex-direction: column;
+   width: 80%;
+    margin: auto;
+} 
+footer h2{
+    margin: 0.5em 0.5em 0 0.5em ;
+}
+
+
+@media (min-width: 200px) and (max-width: 805px) {
+
+
+    /*-----MQ Nav-bar-----*/
+
+    .link-container>div a{
+        text-decoration: none;
+        margin: 0.3em;
+        padding: 0.3em;
+        font-size: 0.7em;
+    }
+
+    .link-container{
+        width: 80%;
+        display: flex;
+    }
+
+    .nav-container .logo-container img{
+        height: 100%;
+       margin-right: 0;
+    }
+
+    .link-container>div{
+        margin: 0.3em  0.1em 0.1em;
+    }
+
+
+    /*------MQ Portfolio-------*/
+
+    .portfolio-items-container{
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+        margin: auto;
+    }
+
+
+
+    /*------End MQ Portfolio-------*/
+
+
+    /*------MQ About us page-------*/
+    .profile-picture img{
+        width: 70%;
+        min-width: 200px;
+    }
+
+    .team-member{
+        flex-direction: column;
+
+    }
+
+    .team-member h1{
+        font-size: 1.5em;
+        color: cyan;
+    }
+
+    .team-member p{
+        font-size: 0.7em;
+        padding: 0 1.5em;
+    }
+
+
+    /*Footer MediaQ*/
+    footer a{
+        font-size: 1.1em;
+        margin: 0.5em 0.5em;
+        padding: 0.5em;
+    }
+    .contact{
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 60%;
+    margin: auto;
+    }
+
+
+}
+
+
+@media (min-width: 806px) and (max-width: 1500px) {
+        .team-member h1{
+        font-size: 1.5em;
+        color: cyan;
+    }
+
+    .team-member p{
+        font-size: 0.9em;
+    }
+
+    /*Footer MediaQ*/
+    footer a{
+        font-size: 1.2em;
+        margin: 0.5em 0.5em;
+        padding: 0.5em;
+    }
+
+    .contact{
+    flex-direction: row;
+    flex-wrap: wrap;
+    }
+
+
+}
+
+
+
